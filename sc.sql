@@ -1,30 +1,20 @@
-CREATE TABLE dept 80  as
-select employee_id,last_name,salary*12 ANNSAL,
-hire_date
-from employees
-where department_id=80;
+create SEQUENCE student_id
+INCREMENT by 1
+start with 1
+maxvalue 99999
+nocache
+nocycle;
 
-CREATE SEQUENCE sales_reps_id
-INCREMENT BY 1
-START WITH 100
-MAXVALUE 99999
-NOCACHE
-NOCYCLE;
+create table student(
+id number(5) default student_id.nextval constraint sys_student_id primary key,
+name varchar2(30) not null,
+email varchar2(60) not null constraint student_email_unique unique
+);
 
+INSERT INTO student
+values(default,'Towhid','towhid@gmail.com');
 
-SELECT sales_reps_id.nextval
-from dual;
-
-insert into sales_reps values(sales_reps_id.nextval,'Raju',40000,0.02);
-
-select*from sales_reps;
-
-
-
-
-
-
-
+select * from student;
 
 
 
