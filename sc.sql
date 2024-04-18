@@ -16,7 +16,7 @@ values(default,'Towhid','towhid@gmail.com');
 
 select * from student;
 
-
+commit;
 
 
 
