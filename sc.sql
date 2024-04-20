@@ -19,7 +19,7 @@ select * from student;
 commit;
 
 
-
+CREATE TABLE 
 
 
 
